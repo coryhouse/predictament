@@ -65,13 +65,35 @@ class Background extends Component {
     const { background, onChange, errorsExist, errors, visible } = this.props;
     return (
       <div className={visible ? null : "hidden"}>
-        <h2>Background</h2>
+        <h2>Background Questions</h2>
         {!isEmpty(errors) && (
           <p style={{ color: "#a94442" }}>Please correct the errors below.</p>
         )}
         <div>
           {errorsExist && <p>Please correct the errors below.</p>}
           <ol>
+            <li>
+              <TextInput
+                label="On a scale of 0 (extremely unhappy) to 100 (highest possible happiness), what would you say your current overall level of well-being is?"
+                id="swb"
+                name="swb"
+                type="number"
+                value={background.swb}
+                onChange={onChange}
+                error={errors.swb}
+              />
+            </li>
+            <li>
+              <TextInput
+                label="On a scale of 0 (extremely unhealthy) to 100 (best possible health level), what would you say your level of overall health is?"
+                id="swb"
+                name="swb"
+                type="number"
+                value={background.swb}
+                onChange={onChange}
+                error={errors.swb}
+              />
+            </li>
             <li>
               <TextInput
                 label="What is your age?"

@@ -3,7 +3,7 @@ export const scenarios = [
     scenarioId: 1,
     topic: "Income",
     options: ["$50,000", "$75,000", "$100,000", "$150,000", "$200,000"],
-    bonusQuestion: "Predict this person's yearly income based on the following profile information:",
+    bonusQuestion: "Predict this person's yearly income based on the displayed profile information:",
     // TODO: Are total tokens tied to a scenario?
     totalTokens: 30
   },
